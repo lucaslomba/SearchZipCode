@@ -1,0 +1,37 @@
+body{
+    height: 100%;
+    background-color: rgb(42, 189, 152);
+}
+
+textarea:focus, input:focus, select:focus {
+    box-shadow: 0 0 0 0!important;
+    outline: 0!important;
+} 
+
+input{
+    font-size: 20pt!important;
+    color: white!important;
+    background-color: transparent!important;
+    border-radius: 0!important;
+    border-top: none!important;
+    border-right: none!important;
+    border-left: none!important;
+    border-bottom: 2px solid!important;
+}
+
+input::placeholder{
+    color: white!important;
+}
+
+.btn-search{
+    background-color: white;
+    color: rgb(0, 102, 77);
+    font-size: 18pt;
+    width: 100%;
+}
+
+span{
+    color: white;
+    font-size: 20pt;
+    padding: 10px;
+}
