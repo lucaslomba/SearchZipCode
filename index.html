@@ -7,9 +7,16 @@
     <link rel="stylesheet" href="./src/css/bootstrap.min.css">
     <link rel="stylesheet" href="./src/css/fontawesome.min.css">
     <link rel="stylesheet" href="./src/css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://unpkg.com/vue@2.2.6/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-the-mask@0.11.1/dist/vue-the-mask.js"></script>
 </head>
 <body>
-    <div class="container-fluid mt-5">
+    <div class="container-fluid" id="busca">
+        <div class="alert alert-warning mt-2 text-center" role="alert" id="alerta" style="width: 200px; margin-left: auto; margin-right: auto; display: none;">
+            Insira um CEP valido
+        </div>
         <div class="row d-flex flex-column justify-content-center align-items-center">
             <div class="col-md-6 d-flex justify-content-center">
                 <img src="./src/img/bg.png" alt="" class="img-fluid">
@@ -17,14 +24,43 @@
             <div class="col-md-6 d-flex flex-column justify-content-center align-items-center">
                 <form action="" class="d-flex flex-column align-items-center">
                     <div class="form-group">
-                      <input type="text" class="form-control" id="cep" placeholder="Insira um CEP">
+                        <the-mask :mask="['#####-###']" type="text" name="cep" class="form-control" id="cep"
+                        onkeyup="buscarCep()" placeholder="Seu CEP" required />
                     </div>
-                    <button type="submit" class="btn btn-search">Buscar</button>
+                    <button type="button" class="btn btn-search" onclick="buscarcep()">Buscar</button>
                 </form>
             </div>
         </div>
     </div>
+    
+    <div class="container-fluid mt-5" id="resultado" style="display: none;">
+        <div class="row d-flex flex-column justify-content-center align-items-center">
+            <div class="col-md-6 d-flex flex-column justify-content-center">
+                <div class="row">
+                    <div class="col-md-4  pt-4 pb-4 text-center">
+                        <span>Estado:</span><br><span id="uf"></span>
+                    </div>
+                    <div class="col-md-4  pt-4 pb-4 text-center">
+                        <span>Cidade:</span><br><span id="cidade"></span>
+                    </div>
+                    <div class="col-md-4  pt-4 pb-4 text-center">
+                        <span>Bairro:</span><br><span id="bairro"></span>
+                    </div>
+                    <div class="col-md-12 pt-4 pb-4 text-center">
+                        <span>Rua:</span><br><span id="rua"></span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-6 d-flex flex-column justify-content-center align-items-center mt-3">
+                <iframe src="" width="100%" height="250px" frameborder="0" id="mapa" style="border: 2px solid white; border-radius: 10px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <button class="btn btn-search mt-2" onclick="novaBusca()">Nova Busca</button>
+            </div>
+        </div>
 
     <script src="./src/js/bootstrap.min.js"></script>
+
+    <script src="./src/js/buscar.js">
+    </script>
 </body>
 </html>
