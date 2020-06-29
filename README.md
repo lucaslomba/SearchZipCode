@@ -1,6 +1,7 @@
 # Busca CEP
 
-Sistema de busca de CEP consumindo API do CEP e fazendo busca no iframe do google maps, desenvolvido com JS, HTML, CSS, ElectronJS
+Sistema de busca de CEP consumindo API do CEP e fazendo busca no iframe do google maps, 
+desenvolvido com JS, HTML, CSS, ElectronJS
 
 para instalar todas as dependencias do projeto
  - run npm install -g 
