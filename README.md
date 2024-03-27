@@ -1,18 +1,40 @@
-# Busca CEP
 
-Sistema de busca de CEP consumindo API do CEP e fazendo busca no iframe do google maps, 
-desenvolvido com JS, HTML, CSS, ElectronJS
+# 🌎 Search zip code
 
-para instalar todas as dependencias do projeto
- - run npm install -g 
+Simple system to search for zip codes via API, displaying in a google maps iframe
+## 🚀 Techs
 
-para gerar o exe electron
- - electron-packager <sourcedir> <appname> --platform=<platform>
-  
-<sourcedir> deverá ser substituido pelo caminho fonte
-<appname> deverá ser substituido pelo nome do app
-<platform> deverá ser substituido por win32
-  
-#Example: - electron-packager C:\Users\Developer\Documents\electron buscaCEP --platform=<win32>
-  
-#Code by Lucas Lomba
+HTML, CSS, JavaScript, ElectronJS
+
+
+## 🛠️ Running
+
+📥 Clone the repository:
+
+```bash
+  git clone https://github.com/lucaslomba/SearchZipCode.git
+```
+
+📂 Navigate to the project directory:
+
+```bash
+  cd searchZipCode
+```
+
+📦 Install the dependencies:
+
+```bash
+  npm install
+```
+
+💻 Generate the executable:
+
+```bash
+  electron-packager <sourcedir> <appname> --platform=<platform>
+```
+
+
+## Authors
+
+- [@lucaslomba](https://github.com/lucaslomba)
+
